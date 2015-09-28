@@ -5,7 +5,7 @@
 // @description  this script is hacked together and might break on changes by wikipedia
 //               however i was sick of not getting auto redirected to desktop site for wikipedia
 // @author       You
-// @match        https://en.m.wikipedia.org/*
+// @match        https://*.m.wikipedia.org/*
 // @grant        none
 // ==/UserScript==
 
@@ -14,7 +14,7 @@ var url_fixed = url.search("m.wikipedia.org");
 var new_url;
 
 if (url_fixed != -1){
-    new_url = "https://www."+url.substring(url_fixed+2, url.length);
+    new_url = "https://"+url.substring(url_fixed+2, url.length);
     rewriteUrl(new_url);
 }else{
     //not m.wikipedia.org shouldn't ever happen
