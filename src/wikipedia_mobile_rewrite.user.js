@@ -9,17 +9,11 @@
 // @grant        none
 // ==/UserScript==
 
-var url = window.location.href;
-var url_fixed = url.search("m.wikipedia.org");
-var new_url;
+const url = window.location.href;
+const url_fixed = url.search("m.wikipedia.org");
+let new_url;
 
 if (url_fixed != -1){
     new_url = "https://"+url.substring(url_fixed+2, url.length);
-    rewriteUrl(new_url);
-}else{
-    //not m.wikipedia.org shouldn't ever happen
-    alert('I need an adult'); 
-}
-function rewriteUrl(url_text){
-    window.location.href = url_text;
+    window.location.href = new_url;
 }

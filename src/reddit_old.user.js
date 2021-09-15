@@ -12,6 +12,6 @@
 (function() {
     'use strict';
 
- var newUrl = location.href.replace("https://www.", 'https://old.');
+    const newUrl = location.href.replace("https://www.", 'https://old.');
     window.location.replace(newUrl);
 })();
